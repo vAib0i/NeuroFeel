@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="app_background_color">#EFEFF8</color> <!-- Cool Off-White -->
+    <color name="card_background_color">#FFFFFF</color>
+    <color name="primary_ui_color">#00695C</color> <!-- Deep Teal -->
+    <color name="accent_color">#FFAB40</color> <!-- Rich Amber -->
+    <color name="text_primary">#263238</color> <!-- Dark Blue-Gray -->
+    <color name="text_secondary">#546E7A</color> <!-- Cool Gray -->
+    <color name="divider_color">#CFD8DC</color>
+    <color name="secondary_ui_color">#24339D</color>
+    <color name="secondary_accent_color">#7B1FA2</color>
+
+    <!-- NEW: Mood Background Colors -->
+    <color name="mood_happy_background">#FFF9C4</color> <!-- Soft Yellow -->
+    <color name="mood_sad_background">#BBDEFB</color>   <!-- Soft Blue -->
+    <color name="mood_angry_background">#FFCCBC</color> <!-- Soft Red/Terracotta -->
+    <color name="mood_anxious_background">#D1C4E9</color><!-- Soft Lavender -->
+    <color name="mood_neutral_background">#DCD9D9</color><!-- Light Gray -->
+
+    <!-- Base Colors -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+
+</resources>
+

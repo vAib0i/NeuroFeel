@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- This is the color for the icon when the item is selected (checked) -->
+    <item android:state_checked="true" android:color="@color/primary_ui_color" />
+
+    <!-- This is the default color for all other states (unchecked) -->
+    <item android:color="@color/text_secondary" />
+
+</selector>

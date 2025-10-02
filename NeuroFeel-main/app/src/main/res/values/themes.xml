@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.NeuroFeel" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary_ui_color</item>
+        <item name="colorPrimaryVariant">@color/primary_ui_color</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/accent_color</item>
+        <item name="colorSecondaryVariant">@color/accent_color</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/app_background_color</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <!-- Background color -->
+        <item name="android:windowBackground">@color/app_background_color</item>
+    </style>
+
+    <!-- Toolbar Title Style -->
+    <style name="App.Toolbar.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <!-- BottomNav Active Item Indicator Style -->
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:width">64dp</item>
+        <item name="android:height">32dp</item>
+        <item name="marginHorizontal">8dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.App.Pill</item>
+        <item name="android:color">@color/primary_ui_color</item>
+    </style>
+
+    <!-- Shape Appearance for Pill Shape -->
+    <style name="ShapeAppearance.App.Pill" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <!-- Shape Appearance for Large Rounded Corners -->
+    <style name="ShapeAppearance.App.Large" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">24dp</item>
+    </style>
+
+    <!-- Mood Card Styles -->
+    <style name="Widget.App.MoodCard" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">120dp</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/divider_color</item>
+        <item name="android:layout_marginEnd">12dp</item>
+    </style>
+
+    <style name="Widget.App.MoodCard.Content" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Widget.App.MoodCard.Icon" parent="">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="Widget.App.MoodCard.Text" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <!-- Music Player Media Button Styles -->
+    <style name="Widget.App.MediaButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:layout_marginHorizontal">16dp</item>
+    </style>
+
+    <style name="Widget.App.MediaButton.Large" parent="Widget.App.MediaButton">
+        <item name="android:layout_width">72dp</item>
+        <item name="android:layout_height">72dp</item>
+    </style>
+
+    <!-- Profile Screen Option Style -->
+    <style name="Widget.App.ProfileOption" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>

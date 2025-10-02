@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Redesign Notes for fragment_music.xml:
+    - The single CardView is removed for an open layout.
+    - The Album Art is now a ShapeableImageView with large rounded corners.
+    - Media controls are replaced with modern ImageButtons.
+    - Kept original IDs: 'albumArt', 'songTitle', 'artistName', 'progressBar', 'prevButton', 'playPauseButton', 'nextButton'.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp"
+    android:background="@color/app_background_color"
+    tools:context=".MusicFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/albumArt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        android:src="@drawable/music_svgrepo_com"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.App.Large"
+        android:layout_marginBottom="24dp"
+        android:background="@color/text_primary"/>
+
+    <TextView
+        android:id="@+id/songTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Song Title"
+        android:textSize="24sp"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/text_primary"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/artistName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Artist Name"
+        android:textSize="16sp"
+        android:fontFamily="@font/inter_regular"
+        android:textColor="@color/text_secondary"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="24dp"/>
+
+    <SeekBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="24dp">
+        <ImageButton
+            android:id="@+id/prevButton"
+            style="@style/Widget.App.MediaButton"
+            android:src="@drawable/ic_skip_previous"
+            android:contentDescription="Previous Song" />
+        <ImageButton
+            android:id="@+id/playPauseButton"
+            style="@style/Widget.App.MediaButton.Large"
+            android:src="@drawable/ic_play"
+            android:contentDescription="Play or Pause" />
+        <ImageButton
+            android:id="@+id/nextButton"
+            style="@style/Widget.App.MediaButton"
+            android:src="@drawable/ic_skip_next"
+            android:contentDescription="Next Song" />
+    </LinearLayout>
+
+</LinearLayout>
+

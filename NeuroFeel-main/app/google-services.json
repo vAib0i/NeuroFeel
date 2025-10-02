@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1078131972275",
+    "project_id": "neurofeel-ab5f4",
+    "storage_bucket": "neurofeel-ab5f4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078131972275:android:fc1dfa57ff2097328178c6",
+        "android_client_info": {
+          "package_name": "com.example.neurofeel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1078131972275-b7gliecubb8t3auuq6lak6u8khubfvqb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.neurofeel",
+            "certificate_hash": "5b8b2cdc30a2d41d54527f61ecb39e7c8a1594a1"
+          }
+        },
+        {
+          "client_id": "1078131972275-mc3j7h8v66o19aokaq0hnocmhrhg4145.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXZwQ8a-fCKZwoyBkoujkJqgBr12DIbbU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1078131972275-mc3j7h8v66o19aokaq0hnocmhrhg4145.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Redesign Notes for fragment_home.xml:
+    - Added a "Happy" mood card.
+    - Applied background colors to each mood card for better visual distinction.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background_color"
+    android:fillViewport="true"
+    tools:context=".HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="32dp">
+
+        <!-- Greeting -->
+        <TextView
+            android:id="@+id/greeting_hi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Hi, Harsh!"
+            android:textColor="@color/text_primary"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/greeting_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="How are you feeling today?"
+            android:textColor="@color/text_secondary"
+            android:textSize="18sp" />
+
+        <!-- Mood Selector -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Neutral Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_neutral"
+                    style="@style/Widget.App.MoodCard"
+                    app:cardBackgroundColor="@color/mood_neutral_background">
+                    <LinearLayout style="@style/Widget.App.MoodCard.Content">
+                        <ImageView style="@style/Widget.App.MoodCard.Icon" android:src="@drawable/ic_mood_neutral"/>
+                        <TextView style="@style/Widget.App.MoodCard.Text" android:text="Neutral"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Sad Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_sad"
+                    style="@style/Widget.App.MoodCard"
+                    app:cardBackgroundColor="@color/mood_sad_background">
+                    <LinearLayout style="@style/Widget.App.MoodCard.Content">
+                        <ImageView style="@style/Widget.App.MoodCard.Icon" android:src="@drawable/ic_mood_sad"/>
+                        <TextView style="@style/Widget.App.MoodCard.Text" android:text="Sad"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Angry Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_angry"
+                    style="@style/Widget.App.MoodCard"
+                    app:cardBackgroundColor="@color/mood_angry_background">
+                    <LinearLayout style="@style/Widget.App.MoodCard.Content">
+                        <ImageView style="@style/Widget.App.MoodCard.Icon" android:src="@drawable/ic_mood_angry"/>
+                        <TextView style="@style/Widget.App.MoodCard.Text" android:text="Angry"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Anxious Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_anxious"
+                    style="@style/Widget.App.MoodCard"
+                    app:cardBackgroundColor="@color/mood_anxious_background">
+                    <LinearLayout style="@style/Widget.App.MoodCard.Content">
+                        <ImageView style="@style/Widget.App.MoodCard.Icon" android:src="@drawable/ic_mood_anxious"/>
+                        <TextView style="@style/Widget.App.MoodCard.Text" android:text="Anxious"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- "For You" Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="For You Today"
+            android:textColor="@color/text_primary"
+            android:textSize="22sp" />
+
+        <!-- Card 1: Calm Your Mind -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/card_background_color"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/divider_color">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/yoga_animation_view"
+                    app:layout_constraintBottom_toBottomOf="parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Calm Your Mind"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="Try a 2-minute breathing session to find your center."
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp" />
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/begin_calm"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Begin"
+                        app:cornerRadius="16dp" />
+                </LinearLayout>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/yoga_animation_view"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    app:lottie_rawRes="@raw/yoga_ani"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Card 2: Journal Your Thoughts -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/card_background_color"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/divider_color">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/journal_animation_view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Journal Your Thoughts"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="Write down what's on your mind to gain clarity."
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/begin_journal"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Start Writing"
+                        app:cornerRadius="16dp" />
+                </LinearLayout>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/journal_animation_view"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    app:lottie_rawRes="@raw/journal_animation"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>
+
